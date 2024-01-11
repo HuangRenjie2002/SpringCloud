@@ -8,7 +8,10 @@
     <packaging>pom</packaging>
 
     <name>springcloud</name>
-    <url>http://maven.apache.org</url>
+
+    <modules>
+        <module>gateway</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,7 +43,23 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <modules>
-        <module>gateway</module>
-    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <attach>false</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
