@@ -1,1 +1,13 @@
-
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.0.60:8848
+        username: nacos
+        password: nacos
+        namespace: dev
+  config:
+    import:
+      - optional:nacos:gateway.yml
