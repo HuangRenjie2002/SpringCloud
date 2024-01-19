@@ -12,6 +12,8 @@
     <modules>
         <module>gateway</module>
         <module>common</module>
+        <module>producer</module>
+        <module>consumer</module>
     </modules>
 
     <properties>
