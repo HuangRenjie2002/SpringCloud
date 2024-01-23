@@ -1,19 +1,13 @@
 package pers.huang.utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.*;
-import org.springframework.stereotype.Component;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author 徐一杰
- * @date 2022/4/3
- * @description 对RedisTemplate进行封装
- */
-@Component
-@SuppressWarnings({"unchecked", "rawtypes"})
+@Configuration
 public class RedisUtil {
 
     @Autowired
