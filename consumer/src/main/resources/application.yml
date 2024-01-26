@@ -1,3 +1,5 @@
+server:
+  port: 10000
 spring:
   application:
     name: consumer
@@ -22,8 +24,8 @@ spring:
       password: 666
       database: 0
   datasource:
-    druid:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://192.168.0.60:3306/consumer?characterEncoding=utf8&serverTimezone=UTC
-      username: root
-      password: 666
+#    druid:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.60:3306/consumer?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 666
