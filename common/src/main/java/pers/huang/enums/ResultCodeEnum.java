@@ -13,7 +13,8 @@ import java.util.stream.Stream;
 @Getter
 public enum ResultCodeEnum {
     SUCCESS("0000", "操作成功"),
-    FAILED("0001", "操作失败"),
+    FAILED("1000", "操作失败"),
+    CUSTOM_EXCEPTION("0001","操作失败"),
     TOKEN_FAILURE("0002","身份信息验证失败，请重新登陆")
     ;
 
