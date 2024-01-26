@@ -3,11 +3,21 @@ spring:
     name: producer
   cloud:
     nacos:
-      config:
+#      config:
+#        server-addr: 192.168.0.60:8848
+#        username: nacos
+#        password: nacos
+#        namespace: dev
+      discovery:
         server-addr: 192.168.0.60:8848
         username: nacos
         password: nacos
         namespace: dev
-  config:
-    import:
-      - optional:nacos:producer.yml
+  #  config:
+  #    import:
+  #      - optional:nacos:producer.yml
+  data:
+    redis:
+      host: 192.168.0.60
+      password: 666
+      database: 0

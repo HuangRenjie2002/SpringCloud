@@ -3,11 +3,27 @@ spring:
     name: consumer
   cloud:
     nacos:
-      config:
+#      config:
+#        server-addr: 192.168.0.60:8848
+#        username: nacos
+#        password: nacos
+#        namespace: dev
+      discovery:
         server-addr: 192.168.0.60:8848
         username: nacos
         password: nacos
         namespace: dev
-  config:
-    import:
-      - optional:nacos:consumer.yml
+#  config:
+#    import:
+#      - optional:nacos:consumer.yml
+  data:
+    redis:
+      host: 192.168.0.60
+      password: 666
+      database: 0
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.0.60:3306/consumer?characterEncoding=utf8&serverTimezone=UTC
+      username: root
+      password: 666
