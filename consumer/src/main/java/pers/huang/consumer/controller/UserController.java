@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import pers.huang.consumer.model.entity.User;
 import pers.huang.consumer.service.UserService;
-import pers.huang.enums.ResultCodeEnum;
-import pers.huang.handler.CustomException;
 import pers.huang.model.vo.RestVo;
 import pers.huang.utils.RedisUtil;
 
@@ -31,9 +29,7 @@ public class UserController {
     public RestVo redis(){
         User user = userService.getById(1);
 redisUtil.set("user",user);
-        User a = redisUtil.get("user");
-        if (true)
-        throw new CustomException(ResultCodeEnum.CUSTOM_EXCEPTION,"6666");
+        Object a = redisUtil.get("user");
         return RestVo.successVo(a);
     }
 }
