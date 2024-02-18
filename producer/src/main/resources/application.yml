@@ -6,12 +6,12 @@ spring:
   cloud:
     nacos:
 #      config:
-#        server-addr: 192.168.0.60:8848
+#        server-addr: 192.168.60.10:8848
 #        username: nacos
 #        password: nacos
 #        namespace: dev
       discovery:
-        server-addr: 192.168.0.60:8848
+        server-addr: 192.168.60.10:8848
         username: nacos
         password: nacos
         namespace: dev
@@ -20,6 +20,6 @@ spring:
   #      - optional:nacos:producer.yml
   data:
     redis:
-      host: 192.168.0.60
+      host: 192.168.60.10
       password: 666
       database: 0
