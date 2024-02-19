@@ -23,3 +23,14 @@ spring:
       host: 192.168.60.10
       password: 666
       database: 0
+  datasource:
+    #    druid:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.60.10:3306/consumer?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 666
+  rabbitmq:
+      addresses: 192.168.60.10:5672
+      username: root
+      password: 666
+      virtual-host: /

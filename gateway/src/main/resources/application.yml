@@ -26,3 +26,9 @@ spring:
             - Path=/api/user/**
           filters:
             - RewritePath=/api/(?<segment>/?.*),/$\{segment}
+        - id: producer
+          uri: lb://producer
+          predicates:
+            - Path=/api/test/**
+          filters:
+            - RewritePath=/api/(?<segment>/?.*),/$\{segment}
