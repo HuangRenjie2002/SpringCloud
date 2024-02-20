@@ -34,3 +34,8 @@ spring:
     username: root
     password: 666
     virtual-host: /
+    listener:
+      direct:
+        acknowledge-mode: manual
+      simple:
+        acknowledge-mode: manual
