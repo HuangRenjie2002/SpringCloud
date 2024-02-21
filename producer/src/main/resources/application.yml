@@ -34,3 +34,5 @@ spring:
       username: root
       password: 666
       virtual-host: /
+      publisher-returns: true
+      publisher-confirm-type: correlated

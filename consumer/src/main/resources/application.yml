@@ -39,3 +39,6 @@ spring:
         acknowledge-mode: manual
       simple:
         acknowledge-mode: manual
+        retry:
+          enabled: true
+          max-attempts: 3
